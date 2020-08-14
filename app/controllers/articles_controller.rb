@@ -1,4 +1,3 @@
-
 class ArticlesController < ApplicationController
   include ArticlesHelper
   def index
@@ -39,6 +38,4 @@ class ArticlesController < ApplicationController
     flash.notice = "Article '#{@article.title}' Updated!"
     redirect_to article_path(@article)
   end
-
-
 end
