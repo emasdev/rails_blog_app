@@ -7,7 +7,7 @@ class Article < ApplicationRecord
   validates_attachment_content_type :image, content_type: ['image/jpg', 'image/jpeg', 'image/png']
 
   def tag_list
-    tags.collect(&:name.join(', '))
+    tags.collect(&:name).join(', ')
   end
 
   def tag_list=(tags_string)
